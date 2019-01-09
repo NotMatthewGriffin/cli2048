@@ -151,7 +151,9 @@ def main():
 		# recalculate possible moves
 		possible_moves = calc_possible(game)
 
-	
+	# one final time display the board
+	# without this the user cannot see the losing game board
+	display_board(stdscr, game)
 	curses.flash()
 	time.sleep(2)
 	display_text(stdscr, 'GAME OVER :(')
